@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Sora } from "next/font/google";
+import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const geist = Geist({
@@ -19,10 +20,9 @@ const sora = Sora({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://streamcore.com.ar";
-
 export const metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
+  applicationName: "StreamCore",
   title: {
     default: "StreamCore | Interacción y control para streamers de Kick",
     template: "%s | StreamCore",
@@ -39,11 +39,14 @@ export const metadata = {
   ],
   authors: [{ name: "Codeluxe" }],
   creator: "Codeluxe",
+  publisher: "Codeluxe",
+  category: "technology",
+  referrer: "origin-when-cross-origin",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "/",
+    url: SITE_URL,
     siteName: "StreamCore",
     title: "StreamCore | Convierte tu stream en una experiencia viva",
     description:
@@ -55,7 +58,17 @@ export const metadata = {
     description:
       "Herramientas para crear una comunidad más activa dentro y fuera del chat.",
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export const viewport = {

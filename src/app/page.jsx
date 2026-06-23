@@ -8,12 +8,13 @@ import { ManifestoSection } from "@/components/landing/manifesto-section";
 import { ProcessSection } from "@/components/landing/process-section";
 import { SignalFlow } from "@/components/landing/signal-flow";
 import { ContactCta } from "@/components/landing/contact-cta";
-import { CONTACT } from "@/lib/constants";
+import { CONTACT, SITE_URL } from "@/lib/constants";
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Codeluxe",
+  url: SITE_URL,
   brand: { "@type": "Brand", name: "StreamCore" },
   email: CONTACT.email,
   telephone: CONTACT.phoneDisplay,
@@ -23,6 +24,7 @@ const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "StreamCore",
+  url: SITE_URL,
   applicationCategory: "MultimediaApplication",
   operatingSystem: "Windows, Web, Chrome",
   description:

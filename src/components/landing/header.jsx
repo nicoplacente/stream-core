@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { MobileMenu } from "@/components/landing/mobile-menu";
 import { CONTACT } from "@/lib/constants";
+import Image from "next/image";
 
 const links = [
   { href: "#capacidades", label: "Capacidades" },
@@ -19,6 +20,13 @@ export function Header() {
             <span />
             <span />
           </span>
+          {/* <Image
+            src="/streamcore.webp"
+            width={50}
+            height={50}
+            alt="Logo StreamCore"
+            loading="eager"
+          /> */}
           <span>StreamCore</span>
         </a>
 

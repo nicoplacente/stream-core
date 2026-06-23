@@ -1,5 +1,4 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://streamcore.com.ar";
+export const SITE_URL = "https://streamcore.codeluxe.tech/";
 
 export const CONTACT = {
   phoneDisplay: "+54 9 2926 40-2409",
