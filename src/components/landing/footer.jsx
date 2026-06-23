@@ -8,18 +8,18 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <a className="brand" href="#inicio">
-            <span className="brand-mark" aria-hidden="true">
+            {/* <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
               <span />
-            </span>
-            {/* <Image
+            </span> */}
+            <Image
               src="/streamcore.webp"
-              width={50}
-              height={50}
+              width={20}
+              height={20}
               loading="eager"
               alt="Logo StreamCore"
-            /> */}
+            />
             <span>StreamCore</span>
           </a>
           <p>
