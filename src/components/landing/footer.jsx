@@ -15,8 +15,8 @@ export function Footer() {
             </span> */}
             <Image
               src="/streamcore.webp"
-              width={20}
-              height={20}
+              width={30}
+              height={30}
               loading="eager"
               alt="Logo StreamCore"
             />
