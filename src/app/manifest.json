@@ -1,0 +1,17 @@
+{
+  "name": "StreamCore",
+  "short_name": "StreamCore",
+  "description": "Herramientas de interacción, recompensas, overlays y control para comunidades de streaming.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070b17",
+  "theme_color": "#070b17",
+  "icons": [
+    {
+      "src": "/streamcore.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

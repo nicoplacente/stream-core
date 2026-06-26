@@ -4,17 +4,17 @@ import { CONTACT } from "@/lib/constants";
 import Image from "next/image";
 
 const links = [
-  { href: "#capacidades", label: "Capacidades" },
-  { href: "#demos", label: "Demos" },
-  { href: "#ecosistema", label: "Ecosistema" },
-  { href: "#como-funciona", label: "Cómo funciona" },
+  { href: "/#capacidades", label: "Capacidades" },
+  { href: "/#demos", label: "Demos" },
+  { href: "/#ecosistema", label: "Ecosistema" },
+  { href: "/#como-funciona", label: "Cómo funciona" },
 ];
 
 export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href="#inicio" aria-label="StreamCore, inicio">
+        <a className="brand" href="/#inicio" aria-label="StreamCore, inicio">
           {/* <span className="brand-mark" aria-hidden="true">
             <span />
             <span />
@@ -49,7 +49,7 @@ export function Header() {
           Hablemos
         </a>
 
-        <MobileMenu links={links} mailto={CONTACT.mailto} />
+        <MobileMenu links={links} />
       </div>
     </header>
   );

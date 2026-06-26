@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <a className="brand" href="#inicio">
+          <a className="brand" href="/#inicio">
             {/* <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
@@ -29,10 +29,12 @@ export function Footer() {
         </div>
         <nav aria-label="Enlaces del producto">
           <strong>Producto</strong>
-          <a href="#capacidades">Capacidades</a>
-          <a href="#demos">Demos</a>
-          <a href="#ecosistema">Ecosistema</a>
-          <a href="#como-funciona">Cómo funciona</a>
+          <a href="/#capacidades">Capacidades</a>
+          <a href="/#demos">Demos</a>
+          <a href="/#ecosistema">Ecosistema</a>
+          <a href="/#como-funciona">Cómo funciona</a>
+          <a href="/terminos">Términos y condiciones</a>
+          <a href="/politicas">Política de privacidad</a>
         </nav>
         <div className="footer-contact">
           <strong>Contacto</strong>

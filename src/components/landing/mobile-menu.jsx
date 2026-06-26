@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import { Mail, Menu } from "lucide-react";
+import { Menu, MessageCircle } from "lucide-react";
+import { CONTACT } from "@/lib/constants";
 
-export function MobileMenu({ links, mailto }) {
+export function MobileMenu({ links }) {
   const detailsRef = useRef(null);
 
   const closeMenu = () => {
@@ -23,8 +24,8 @@ export function MobileMenu({ links, mailto }) {
             {link.label}
           </a>
         ))}
-        <a href={mailto} onClick={closeMenu}>
-          <Mail size={16} aria-hidden="true" /> Contactar por correo
+        <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" onClick={closeMenu}>
+          <MessageCircle size={16} aria-hidden="true" /> Hablemos
         </a>
       </nav>
     </details>

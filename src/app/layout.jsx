@@ -24,7 +24,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "StreamCore",
   title: {
-    default: "StreamCore | Interacción y control para streamers de Kick",
+    default: "StreamCore | Interacción y control para Streamers",
     template: "%s | StreamCore",
   },
   description:
@@ -51,13 +51,23 @@ export const metadata = {
     title: "StreamCore | Convierte tu stream en una experiencia viva",
     description:
       "Centraliza la interacción de tu comunidad con recompensas, apuestas, overlays y control en tiempo real.",
+    images: [
+      {
+        url: "/streamcore.png",
+        width: 512,
+        height: 512,
+        alt: "Logo de StreamCore",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "StreamCore | Interacción para streamers de Kick",
     description:
       "Herramientas para crear una comunidad más activa dentro y fuera del chat.",
+    images: ["/streamcore.png"],
   },
+  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,
@@ -80,7 +90,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${geist.variable} ${geistMono.variable} ${sora.variable}`}>
+    <html
+      lang="es-AR"
+      className={`${geist.variable} ${geistMono.variable} ${sora.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
