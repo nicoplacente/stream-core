@@ -1,10 +1,14 @@
+import Image from "next/image";
+
 export function ManifestoSection() {
   return (
     <section className="manifesto-section" aria-labelledby="manifesto-title">
       <div className="container manifesto-panel">
         <span className="manifesto-grid" aria-hidden="true" />
         <div className="manifesto-index" aria-hidden="true">
-          <span>SC</span>
+          <span>
+            <Image src="/streamcore.webp" alt="" width={32} height={32} />
+          </span>
           <i />
           <small>01</small>
         </div>
