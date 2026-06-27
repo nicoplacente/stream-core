@@ -53,10 +53,10 @@ export const metadata = {
       "Centraliza la interacción de tu comunidad con recompensas, apuestas, overlays y control en tiempo real.",
     images: [
       {
-        url: "/streamcore.png",
-        width: 512,
-        height: 512,
-        alt: "Logo de StreamCore",
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Vista previa de StreamCore",
       },
     ],
   },
@@ -65,7 +65,7 @@ export const metadata = {
     title: "StreamCore | Interacción para streamers de Kick",
     description:
       "Herramientas para crear una comunidad más activa dentro y fuera del chat.",
-    images: ["/streamcore.png"],
+    images: ["/opengraph-image.png"],
   },
   manifest: "/manifest.json",
   robots: {
