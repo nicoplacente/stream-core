@@ -952,12 +952,18 @@ summary {
 .video-placeholder {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  pointer-events: none;
+  width: 100%;
+  border: 0;
+  color: inherit;
+  opacity: 1;
+  transition: opacity 180ms ease;
+  cursor: pointer;
   background:
     radial-gradient(
       circle at 50% 42%,
@@ -965,6 +971,10 @@ summary {
       transparent 32%
     ),
     linear-gradient(145deg, #0e1729, #080d19);
+}
+.video-placeholder:focus-visible {
+  outline: 2px solid rgba(189, 120, 255, 0.65);
+  outline-offset: -2px;
 }
 .demo-green .video-placeholder {
   background:
@@ -1017,6 +1027,11 @@ summary {
   color: var(--text-muted);
   font-size: 11px;
 }
+.video-placeholder.is-hidden,
+.custom-controls.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 .custom-controls {
   position: absolute;
   z-index: 2;
@@ -1028,6 +1043,8 @@ summary {
   color: #dce4f7;
   background: linear-gradient(transparent, rgba(3, 6, 12, 0.9));
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 180ms ease;
 }
 .timeline {
   height: 3px;
