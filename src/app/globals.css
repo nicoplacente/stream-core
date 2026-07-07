@@ -340,6 +340,7 @@ summary {
   border-color: rgba(255, 255, 255, 0.34);
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-1px);
+  cursor: pointer;
 }
 .hero-proof {
   display: flex;
@@ -1414,6 +1415,129 @@ summary {
 .contact-actions .secondary-cta {
   font-size: 13px;
 }
+.dossier-trigger {
+  color: var(--text);
+}
+.dossier-modal {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  padding: 24px;
+}
+.dossier-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 6, 14, 0.78);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+.dossier-modal-panel {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  top: 50dvh;
+  left: 50%;
+  width: min(calc(100vw - 32px), 520px);
+  width: min(calc(100dvw - 32px), 520px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 28px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(189, 120, 255, 0.13),
+      transparent 32%
+    ),
+    #0d1424;
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.48),
+    inset 0 1px rgba(255, 255, 255, 0.05);
+}
+.dossier-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.dossier-modal-header h3 {
+  margin: 10px 0 0;
+  font-family: var(--font-sora), sans-serif;
+  font-size: clamp(25px, 5vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+.dossier-modal-close {
+  display: grid;
+  flex: 0 0 40px;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text-soft);
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+.dossier-modal-close:hover {
+  border-color: var(--line-strong);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+.dossier-options {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.dossier-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.03);
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+.dossier-option:hover {
+  border-color: rgba(189, 120, 255, 0.42);
+  background: rgba(189, 120, 255, 0.08);
+  transform: translateY(-1px);
+}
+.dossier-option-icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(66, 217, 255, 0.22);
+  border-radius: 10px;
+  color: var(--cyan);
+  background: rgba(66, 217, 255, 0.07);
+}
+.dossier-option strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-sora), sans-serif;
+  font-size: 15px;
+}
+.dossier-option small {
+  display: block;
+  color: var(--text-soft);
+  line-height: 1.45;
+}
 
 .footer {
   padding: 70px 0 24px;
@@ -1464,6 +1588,19 @@ summary {
   border-top: 1px solid var(--line);
   color: var(--text-muted);
   font-size: 11px;
+}
+.footer-credit-link {
+  color: var(--text-soft);
+  text-decoration: underline;
+  text-decoration-color: rgba(167, 177, 199, 0.36);
+  text-underline-offset: 0.18em;
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s;
+}
+.footer-credit-link:hover {
+  color: var(--text);
+  text-decoration-color: currentColor;
 }
 .footer-bottom .mono-label {
   display: inline-flex;
@@ -1893,8 +2030,15 @@ summary {
   .contact-actions {
     grid-template-columns: 1fr;
   }
-  .contact-actions a {
+  .contact-actions a,
+  .contact-actions button {
     width: 100%;
+  }
+  .dossier-modal {
+    padding: 16px;
+  }
+  .dossier-modal-panel {
+    padding: 24px;
   }
   .footer-grid {
     grid-template-columns: 1fr;

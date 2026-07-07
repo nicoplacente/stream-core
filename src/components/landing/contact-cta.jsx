@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import { DossierDownloadModal } from "@/components/landing/dossier-download-modal";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { CONTACT } from "@/lib/constants";
 
@@ -17,6 +18,7 @@ export function ContactCta() {
             <ShimmerButton as="a" href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="primary-cta">
               <MessageCircle size={19} aria-hidden="true" /> Conversar por WhatsApp <ArrowUpRight size={17} aria-hidden="true" />
             </ShimmerButton>
+            <DossierDownloadModal />
             <a className="secondary-cta" href={CONTACT.mailto}><Mail size={18} aria-hidden="true" /> {CONTACT.email}</a>
           </div>
         </div>

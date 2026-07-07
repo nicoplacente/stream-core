@@ -48,7 +48,16 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>
-          © {new Date().getFullYear()} Codeluxe. Todos los derechos reservados.
+          © {new Date().getFullYear()}{" "}
+          <a
+            className="footer-credit-link"
+            href="https://codeluxe.tech"
+            target="_blank"
+            rel="noopener"
+          >
+            Codeluxe
+          </a>
+          . Todos los derechos reservados.
         </span>
         <span className="mono-label">
           <i /> SISTEMA OPERATIVO
