@@ -1,3 +1,4 @@
+import { ContactCta } from "@/components/landing/contact-cta";
 import { DemoSection } from "@/components/landing/demo-section";
 import { EcosystemSection } from "@/components/landing/ecosystem-section";
 import { FeatureSection } from "@/components/landing/feature-section";
@@ -7,7 +8,7 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { ManifestoSection } from "@/components/landing/manifesto-section";
 import { ProcessSection } from "@/components/landing/process-section";
 import { SignalFlow } from "@/components/landing/signal-flow";
-import { ContactCta } from "@/components/landing/contact-cta";
+import { StreamersSection } from "@/components/landing/streamers-section";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <ManifestoSection />
         <FeatureSection />
         <DemoSection />
+        <StreamersSection />
         <SignalFlow />
         <EcosystemSection />
         <ProcessSection />
